@@ -4,8 +4,11 @@
   "description": "a react app from scratch",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode development",
+    "start": "yarn serve",
+    "build": "yarn build:dev",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "serve": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dhagman",
@@ -26,6 +29,9 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
+    "node-sass": "^4.10.0",
+    "node-sass-middleware": "^0.11.0",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
