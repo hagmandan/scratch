@@ -1,14 +1,23 @@
 {
   "name": "scratch",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "a react app from scratch",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "build": "yarn build:dev",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dhagman",
   "license": "MIT",
+  "repository": "git@github.com:hagmandan/scratch.git",
+  "dependencies": {
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-hot-loader": "^4.3.12"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
@@ -22,9 +31,5 @@
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
-  },
-  "dependencies": {
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1"
   }
 }
