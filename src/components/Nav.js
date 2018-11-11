@@ -26,21 +26,17 @@ class Nav extends Component {
   }
 
   render() {
+
+    const navList = [1,2,3,4].map((num) => 
+      <li key={num.toString()} className={this.state.activeSection == num ? 'active' : ''}>
+        <button type="button" onClick={this.handleClick} value={num}>{num}</button>
+      </li>
+    );
+
     return (
       <nav className={'Nav Section-'+this.state.activeSection}>
         <ul className={'NavList Section-'+this.state.activeSection}>
-          <li className={this.state.activeSection == 1 ? 'active' : ''}>
-            <button type="button" onClick={this.handleClick} value='1'>1</button>
-          </li>
-          <li className={this.state.activeSection == 2 ? 'active' : ''}>
-            <button type="button" onClick={this.handleClick} value='2'>2</button>
-          </li>
-          <li className={this.state.activeSection == 3 ? 'active' : ''}>
-            <button type="button" onClick={this.handleClick} value='3'>3</button>
-          </li>
-          <li className={this.state.activeSection == 4 ? 'active' : ''}>
-            <button type="button" onClick={this.handleClick} value='4'>4</button>
-          </li>
+          {navList}
         </ul>
       </nav>
     );
